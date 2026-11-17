@@ -6,17 +6,17 @@
 
 :root{
   /* PALETA — jasna, architektoniczna, chłodna */
-  --paper:#F3F1EC;          /* główne tło */
-  --paper-2:#E6E3DB;        /* sekcje alternatywne (chłodny jasny szary) */
-  --paper-3:#E6E3DB;        /* delikatne wypełnienia */
-  --ink:#23211E;            /* tekst główny — chłodny grafit */
-  --ink-soft:#43403A;       /* nagłówki drugorzędne */
-  --muted:#87837A;          /* tekst poboczny */
-  --line:rgba(35,33,30,.12);/* hairline */
-  --accent:#8A6B3C;         /* stonowany petrol-slate — jedyny akcent */
-  --accent-d:#6E5430;
-  --accent-soft:rgba(138,107,60,.10);
-  --dark:#23211E;           /* sekcje ciemne (stopka/CTA) */
+  --paper:#FFFDD0;          /* główne tło */
+  --paper-2:#F9E076;        /* sekcje alternatywne (chłodny jasny szary) */
+  --paper-3:#F9E076;        /* delikatne wypełnienia */
+  --ink:#2a1a0e;            /* tekst główny — chłodny grafit */
+  --ink-soft:#3a2614;       /* nagłówki drugorzędne */
+  --muted:#4e3420;          /* tekst poboczny */
+  --line:rgba(137,81,41,.28);/* hairline */
+  --accent:#895129;         /* stonowany petrol-slate — jedyny akcent */
+  --accent-d:#6b3d1d;
+  --accent-soft:rgba(255,193,7,.28);
+  --dark:#895129;           /* sekcje ciemne (stopka/CTA) */
 
   /* HOVER ZDJĘĆ — JEDEN standard dla całego silnika (decyzja K. 04.08.2026, artefakt z wariantami).
      AKTUALNE (K.+Szymon 09.08.2026, wybór z artefaktu 6 wariantów): zoom 1.05 przy 1.4s -
@@ -1658,10 +1658,28 @@ footer{view-transition-name:mt-foot}
 
 
 /* === auto-paleta z marki klienta (źródło: logo) === */
-:root{--accent:#8C6D31;--accent-d:#77581B;--accent-soft:rgba(140,109,49,0.10);--paper:#FCFAF7;--paper-2:#F3F0EA;--paper-3:#EAE6DF;--ink:#242019;--ink-soft:#4C473E;--muted:#7F7B74;--line:rgba(36,32,25,.12);}
+:root{--accent:#895129;--accent-d:#6b3d1d;--accent-soft:rgba(255,193,7,.28);--paper:#FFFDD0;--paper-2:#F9E076;--paper-3:#F9E076;--ink:#2a1a0e;--ink-soft:#3a2614;--muted:#4e3420;--line:rgba(137,81,41,.28);}
 .btn-accent{color:#fff}
 .nav .nav-links a.btn-accent{color:#fff}
 .btn-accent[data-accent-d],.cta-d .btn-accent{color:#fff}
 
 /* === szary tekst dociągnięty do czytelności (WCAG 4.5 na wszystkich tłach) === */
-:root{--muted:#696660;}
+:root{--muted:#4e3420;}
+
+/* ---------- KOLORYSTYKA HONEYCOMB (jak ArtSpaw, 17.11.2026) ----------
+   #FFFDD0 tło, #F9E076 sekcje i karty, #895129 ciemne pasy i stopka, #FFC107 przyciski. */
+.btn-accent,.cta .btn-light,.nav .nav-links a.btn-accent,.sr-book{background:#FFC107;border-color:#FFC107;color:#2a1a0e}
+.btn-accent:hover,.cta .btn-light:hover,.nav .nav-links a.btn-accent:hover,
+.nav:not(.nav-solid) .nav-links a.btn-accent:hover,.nav:not(.nav-solid) .nav-links a.btn-accent:focus-visible{background:#895129;border-color:#895129;color:#fff}
+.svc,.trust-card,.form{background:#F9E076}
+.trust .trust-card{background:#FFFDD0}
+.gateways-band,.opinie{background:#F9E076}
+.opinie .op-card{background:#FFFDD0}
+.cta{background:#895129;color:#FFFDD0}
+.cta h2,.cta h3{color:#fff}
+.cta p{color:#FFFDD0}
+.cta .eyebrow{color:#FFC107}
+.cta .eyebrow::before{background:#FFC107}
+.cta .btn-ghost{border-color:#FFFDD0;color:#FFFDD0}
+.cta .btn-ghost:hover{border-color:#FFC107;color:#FFC107}
+.strip .item{border-left-color:#FFC107}
